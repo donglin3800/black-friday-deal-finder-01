@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Deal Scout — Black Friday 2026 Deal Finder</title>
+  <meta name="description" content="29 real Black Friday and Cyber Monday deals, checked on Nov 27, 2026, each with its store, sale price, usual price and an honest verdict on whether it is really a deal.">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <p class="eyebrow">Black Friday 2026 · Live deals</p>
+      <h1>Deal Scout — <span class="gold">Black Friday</span> deal finder</h1>
+      <p class="subtitle"><strong>29 real deals, checked today.</strong> Every price was read at the
+        store or in a deals roundup that names the store, on <strong>Nov 27, 2026</strong>.
+        Each deal shows its sale price, its usual price, and an honest verdict —
+        a new low, a strong deal, or a routine sale not worth rushing for.</p>
+      <div id="stats-slot"></div>
+    </div>
+  </header>
+
+  <div id="list-view">
+    <section class="controls" aria-label="Search and filters">
+      <div class="controls-row">
+        <input id="search" type="search" placeholder="Search deals — try “airpods”, “OLED” or “vacuum”" aria-label="Search deals">
+        <select id="store" aria-label="Filter by store">
+          <option value="all">All stores</option>
+        </select>
+        <select id="sort" aria-label="Sort deals">
+          <option value="discount">Biggest discount first</option>
+          <option value="saving">Biggest saving first</option>
+          <option value="verdict">Best verdict first</option>
+          <option value="price-low">Lowest price first</option>
+          <option value="price-high">Highest price first</option>
+          <option value="name">Name A–Z</option>
+        </select>
+      </div>
+      <div class="chip-row" id="cats">
+        <p class="chip-row-label">Category</p>
+      </div>
+      <div class="chip-row" id="mins">
+        <p class="chip-row-label">Discount</p>
+      </div>
+      <div class="chip-row" id="verdicts">
+        <p class="chip-row-label">Verdict — is it really a deal?</p>
+      </div>
+      <p id="count"></p>
+    </section>
+
+    <section class="hero" aria-label="Top deals">
+      <h2>Top deals <span>— biggest cuts first</span></h2>
+      <div id="hero-deals"></div>
+    </section>
+
+    <main>
+      <div id="grid"></div>
+    </main>
+  </div>
+
+  <main id="view" hidden></main>
+
+  <footer>
+    <div class="inner">
+      <h3>How these deals were checked</h3>
+      <p>Each deal was found and checked on <strong>Nov 27, 2026</strong> by reading the
+        price at its store or in a deals roundup that names the store — Mashable, Tom's Guide,
+        TechRadar and USA Today. The source is named on every deal, and the discount is always
+        computed from the sale price and the usual price shown, so it adds up.</p>
+      <p><strong>Verdicts:</strong> “New low” is the lowest price the sources have tracked;
+        “Strong deal” is a steep cut on a current model; “Good deal” is a real saving;
+        “Routine sale” is a small cut or a bundle saving — buy it if you need it, not for the discount.</p>
+      <p id="sale-window"></p>
+      <p>Prices move during Black Friday week and can sell out. Confirm the live price on the
+        store page before you buy. Deal Scout is an independent finder and is not affiliated
+        with Amazon, Best Buy or Walmart.</p>
+    </div>
+  </footer>
+
+  <script type="module" src="./main.js"></script>
+</body>
+</html>
